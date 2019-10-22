@@ -14,7 +14,6 @@ python:
   - "3.7"
 
 script:
-  #- cd /jmincy872/travis_test/YEET/ATC/
-  - mkdir test
-  - cd test
-  #- python3 test_airline.py
+  #- mkdir test
+  - cd "C:\Users\mincy\OneDrive\Documents\1. BJU Undergrad\7 sem\CpS 420 - Software Engineering\travis_branch\YEET\ATC"
+  - python3 test_airline.py
