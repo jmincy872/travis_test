@@ -1,16 +1,9 @@
-language: ruby
-rvm
- - 3.7
+language: bash
 
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: ab617320ec4a8c79663ef250ed4b79a74f98878b
-  keep_history: true
-  on:
-    branch: master
+sudo: required
 
 services:
 - docker
 
-sudo: required
+script:
+- echo "hello world"
