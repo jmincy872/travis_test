@@ -2,8 +2,8 @@ language: bash
 
 sudo: required
 
-services:
-- docker
+#services:
+#- docker
 
 script:
-- echo "hello world"
+- touch example
