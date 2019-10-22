@@ -13,4 +13,4 @@ python:
   - "3.7"
 
 script:
-  - cd "YEEY/ATC"; python3 test_airline.py
+  - cd YEET/ATC; python3 test_airline.py
