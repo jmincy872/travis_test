@@ -9,8 +9,10 @@
 #- touch example
 
 language: python
+sudo: required
 python:
   - "3.7"
 
 script:
-  - cd YEET/ATC; python3 test_airline.py
+  - cd jmincy872/travis_test/YEET/ATC
+  - python3 test_airline.py
