@@ -9,3 +9,8 @@ deploy:
   keep_history: true
   on:
     branch: master
+
+services:
+- docker
+
+sudo: required
