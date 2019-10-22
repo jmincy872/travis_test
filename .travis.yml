@@ -1,9 +1,16 @@
-language: bash
+#language: bash
 
-sudo: required
+#sudo: required
 
 #services:
 #- docker
 
+#script:
+#- touch example
+
+language: python
+python
+  - "3.7"
+
 script:
-- touch example
+  - python3 test_airline.py
