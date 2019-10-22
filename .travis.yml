@@ -16,5 +16,5 @@ python:
 before_script: cd "YEET/ATC/"
 
 script:
-  - python3 test_airline.py
+  - python test_airline.py
   - cat test_airline.py
