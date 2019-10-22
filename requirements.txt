@@ -1,0 +1,4 @@
+django
+psycopg2
+mock
+selenium # also install the firefox webdriver and put it in your path
