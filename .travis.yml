@@ -13,8 +13,8 @@ sudo: required
 python:
   - "3.7"
 
-#before_script: cd "/jmincy872/travis_test/YEET/ATC/"
+before_script: cd "/YEET/ATC/"
 
 script:
-  #- python3 test_airline.py
-  - cat README.md
+  - python3 test_airline.py
+  - cat test_airline.py
