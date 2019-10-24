@@ -1,7 +1,34 @@
 sudo: required
 language: python
+python: "3.7"
 services:
-- docker
+  - postgresql
+  - docker
+addons:
+  postgresql: '11'
+env:
+  global:
+    - DBHOST=localhost
+    - PGUSER=postgres
+    - PGPASS=
+before_install:
+  - sudo apt-get update
+  - sudo apt-get --yes remove postgresql\*
+  - sudo apt-get install -y postgresql-11 postgresql-client-11
+  - sudo cp /etc/postgresql/{9.6,11}/main/pg_hba.conf
+  - sudo service postgresql restart 11 
 
-script:
-- docker build -t foobar .
+install:
+  - pip install -r requirements.txt
+
+#before_script:
+#  - psql -c 'create database todo;' -U postgres
+#  - mv mysite/settings.py.travis mysite/settings.py
+
+before_script: cd "YEET/"
+
+script: 
+  - python manage.py test
+  - docker build -t foobar .
+#  - chmod +x run_sonar.sh && ./run_sonar.sh
+
