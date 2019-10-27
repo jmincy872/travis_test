@@ -29,6 +29,7 @@ before_script: cd "YEET/"
 
 script: 
   - python manage.py test
-  - docker build -t foobar .
+  - docker build --tag=“Test” /travis_test/YEET/Dockerfile .
+#  - docker build -t foobar .
 #  - chmod +x run_sonar.sh && ./run_sonar.sh
 
